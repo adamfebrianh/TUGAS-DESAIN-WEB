@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Tugas 06 - Desain Web</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <nav>
+		<a href="#">Home</a>
+		<a href="#">Data</a>
+		<a href="#">Profile</a>
+    </nav>
+
+    <main>
+
+        <header>
+            <h1>ADAM FEBRIAN HIDAYAT</h1>
+            <h2>1121102022</h2>
+
+            <p>
+                A professional graphic artist from Indonesia with extensive experience
+                in the visual arts and design field since 2014.<br>
+                Specializing in creating high-quality illustrations, logos,
+                branding designs, T-shirt designs, and various visual assets
+                for clients worldwide.
+            </p>
+        </header>
+
+        <section>
+
+            <h2>Formulir Driver</h2>
+
+            <form>
+
+                <fieldset>
+
+                    <legend>Data Driver</legend>
+
+                    <table>
+
+                        <tr>
+                            <td>Name</td>
+                            <td>:</td>
+                            <td><input type="text"></td>
+                        </tr>
+
+                        <tr>
+                            <td>Place / Date of Birth</td>
+                            <td>:</td>
+                            <td>
+                                <input type="text">
+                                <input type="date">
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>Team</td>
+                            <td>:</td>
+                            <td>
+                                <select>
+                                    <option>Mercedes</option>
+                                    <option>McLaren</option>
+                                    <option>Ferrari</option>
+                                    <option>Red Bull</option>
+                                </select>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>Address</td>
+                            <td>:</td>
+                            <td><textarea rows="5"></textarea></td>
+                        </tr>
+
+                        <tr>
+                            <td>Phone Number</td>
+                            <td>:</td>
+                            <td><input type="tel"></td>
+                        </tr>
+
+                        <tr>
+                            <td>Driver Seat</td>
+                            <td>:</td>
+                            <td>
+                                <input type="radio" name="seat"> First Driver
+                                <input type="radio" name="seat"> Second Driver
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>Driver Category</td>
+                            <td>:</td>
+                            <td>
+                                <input type="checkbox"> Bronze
+                                <input type="checkbox"> Silver
+                                <input type="checkbox"> Gold
+                                <input type="checkbox"> Platinum
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>Pass Photo</td>
+                            <td>:</td>
+                            <td><input type="file"></td>
+                        </tr>
+
+                        <tr>
+                            <td colspan="3">
+                                <input type="submit" value="Submit">
+                                <input type="button" value="Back">
+                            </td>
+                        </tr>
+
+                    </table>
+
+                </fieldset>
+
+            </form>
+
+        </section>
+
+        <section>
+
+            <h2>Mercedes-AMG Petronas Formula One Team</h2>
+
+            <img src="mercedes_f1.jpg" alt="Mercedes F1" usemap="#mercedesmap">
+
+            <map name="mercedesmap">
+
+                <area shape="rect"
+                    coords="0,0,325,333"
+                    href="https://www.mercedesamgf1.com"
+                    target="_blank">
+
+                <area shape="rect"
+                    coords="326,0,650,333"
+                    href="https://www.formula1.com"
+                    target="_blank">
+
+            </map>
+
+            <p class="note">
+                Klik sisi kiri atau kanan gambar untuk membuka website berbeda.
+            </p>
+
+        </section>
+
+        <section>
+
+            <h2>Opening Titles F1 2026</h2>
+
+            <video controls>
+                <source src="f1.mp4" type="video/mp4">
+            </video>
+
+            <h3>F1 Opening Theme</h3>
+
+            <audio controls>
+                <source src="opening_titles.mp3" type="audio/mpeg">
+            </audio>
+
+        </section>
+
+    </main>
+
+    <footer>
+
+        Copyright © 2026 - Adam Febrian Hidayat
+
+    </footer>
+
+</body>
+
+</html>
