@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<title>Tugas 05, Desain Web</title>
+	</head>
+
+<body>
+
+		<nav>
+			<center>
+				<a href="#">Home</a> |
+				<a href="#">Data</a> |
+				<a href="#">Profile</a>
+			</center>
+		</nav>
+		<hr>
+		<center>
+			<h1>ADAM FEBRIAN HIDAYAT</h1>
+			<h2>1121102022</h2>
+			<hr>
+		</center>
+		
+		<main>
+			<section>
+				<center>
+					<p>A professional graphic artist from Indonesia with extensive experience in the visual arts and design field since 2014.<br>
+					Specializing in creating high-quality illustrations, logos, branding designs, T-shirt designs, and various visual assets for clients worldwide.
+					</p>
+				</center>
+			</section>
+			<hr>
+			<section>
+				<center>
+					<h1>Formulir Driver</h1>
+				</center>
+
+				<form>
+					<fieldset>
+						<legend><h1>Data Driver</h1></legend>
+
+						<table>
+							<tr>
+								<td>Name</td>
+								<td>:</td>
+								<td><input type="text" name="nama"></td>
+							</tr>
+
+							<tr>
+								<td>Tempat/Tanggal Lahir</td>
+								<td>:</td>
+								<td>
+									<input type="text" name="tempat">
+									<input type="date" name="tanggal_lahir">
+								</td>
+							</tr>
+
+							<tr>
+								<td>Team</td>
+								<td>:</td>
+								<td>
+									<select name="team">
+										<option>Mercedes</option>
+										<option>Mclaren</option>
+										<option>Red Bull</option>
+										<option>Ferrari</option>
+									</select>
+								</td>
+							</tr>
+
+							<tr>
+								<td>Adress</td>
+								<td>:</td>
+								<td>
+									<textarea rows="5" cols="50"></textarea>
+								</td>
+							</tr>
+
+							<tr>
+								<td>No Telp/Hp</td>
+								<td>:</td>
+								<td><input type="tel" name="telp"></td>
+							</tr>
+
+							<tr>
+								<td>Driver Seat</td>
+								<td>:</td>
+								<td>
+									<input type="radio" name="jk"> First Driver
+									<input type="radio" name="jk"> Second Driver
+								</td>
+							</tr>
+
+							<tr>
+								<td>Driver Category</td>
+								<td>:</td>
+								<td>
+									<input type="checkbox"> Bronze
+									<input type="checkbox"> Silver
+									<input type="checkbox"> Gold
+									<input type="checkbox"> Platinum
+								</td>
+							</tr>
+
+							<tr>
+								<td>Pas Photo</td>
+								<td>:</td>
+								<td>
+									<input type="file">
+								</td>
+							</tr>
+				
+							<tr>
+								<td colspan="3">
+									<input type="submit" value="Submit">
+								</td>
+							</tr>
+
+							<tr>
+								<td></td>
+								<td></td>
+								<td>
+									<input type="button" value="<<< Kembali">
+									<input type="submit" value="Tambah Data >>>">
+								</td>
+							</tr>
+
+						</table>
+					</fieldset>
+				</form>
+			</section>
+			
+			<section>
+				<center>
+
+				<h2>Mercedes-AMG Petronas F1 Team</h2>
+
+				<img src="mercedes_f1.jpg"
+					 alt="Mercedes F1"
+					 width="650"
+					 usemap="#mercedesmap">
+
+				<map name="mercedesmap">
+
+					<area shape="rect"
+						  coords="0,0,325,333"
+						  href="https://www.mercedesamgf1.com"
+						  target="_blank"
+						  alt="Mercedes">
+
+					<area shape="rect"
+						  coords="326,0,650,333"
+						  href="https://www.formula1.com"
+						  target="_blank"
+						  alt="Formula 1">
+
+				</map>
+
+				<p>Klik sisi kiri atau kanan gambar <br>
+				untuk membuka halaman berbeda.</p>
+
+				</center>
+			</section>
+			<hr>
+			<section>
+				<center>
+					<h2>Opening Titles F1 2026</h2>
+
+					<br><br>
+
+					<video id="f1Video" width="500" controls>
+						<source src="f1.mp4" type="video/mp4">
+					</video>
+
+					<script>
+						const video = document.getElementById("f1Video");
+
+						function toggleVideo() {
+							if (video.paused) {
+								video.play();
+							} else {
+								video.pause();
+							}
+						}
+
+						function ukuranBesar() {
+							video.width = 700;
+						}
+
+						function ukuranSedang() {
+							video.width = 500;
+						}
+
+						function ukuranKecil() {
+							video.width = 350;
+						}
+					</script>
+					
+					<br><br>
+					<button onclick="toggleVideo()">Play / Pause</button>
+					<button onclick="ukuranBesar()">Zoom In</button>
+					<button onclick="ukuranSedang()">Normal</button>
+					<button onclick="ukuranKecil()">Zoom Out</button>
+				</center>
+				
+				<br><br>
+				<hr>
+				<center>
+					<h3>F1 Opening Theme</h3>
+
+					<audio controls>
+						<source src="opening_titles.mp3" type="audio/mpeg">
+					</audio>
+				</center>
+			</section>
+			
+			<br><br>
+			<hr>
+		</main>
+		<footer>
+			<center>
+				<p>Copyrights 2026</p>
+			</center>
+		</footer>
+	</body>
+</html>
