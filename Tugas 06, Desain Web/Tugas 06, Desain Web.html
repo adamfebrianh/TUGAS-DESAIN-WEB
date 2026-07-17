@@ -2,7 +2,7 @@
 
 <html>
 	<head>
-		<title>Tugas 05, Desain Web</title>
+		<title>Tugas 06, Desain Web</title>
 	</head>
 
 <body>
@@ -30,89 +30,193 @@
 				</center>
 			</section>
 			<hr>
-
 			<section>
-				
 				<center>
-					<h3>Data Customer Mei 2026</h3>
+					<h1>Formulir Driver</h1>
+				</center>
 
-					<table border="5">
+				<form>
+					<fieldset>
+						<legend><h1>Data Driver</h1></legend>
 
-						<tr>
-							<th>No</th>
-							<th>Name</th>
-							<th>Address</th>
-							<th>Phone Number</th>
-						</tr>
+						<table>
+							<tr>
+								<td>Name</td>
+								<td>:</td>
+								<td><input type="text" name="nama"></td>
+							</tr>
 
-						<tr>
-							<td>1</td>
-							<td>Imam Royani</td>
-							<td>Ds. Paspan, Kec. Glagah, Banyuwangi</td>
-							<td>0889-8432-3201</td>
-						</tr>
+							<tr>
+								<td>Tempat/Tanggal Lahir</td>
+								<td>:</td>
+								<td>
+									<input type="text" name="tempat">
+									<input type="date" name="tanggal_lahir">
+								</td>
+							</tr>
 
-						<tr>
-							<td>2</td>
-							<td>M. Nabil Izzul</td>
-							<td>Ds. Kaligung, Kec. Blimbingsari, Banyuwangi</td>
-							<td>0888-8432-3202</td>
-						</tr>
+							<tr>
+								<td>Team</td>
+								<td>:</td>
+								<td>
+									<select name="team">
+										<option>Mercedes</option>
+										<option>Mclaren</option>
+										<option>Red Bull</option>
+										<option>Ferrari</option>
+									</select>
+								</td>
+							</tr>
 
-						<tr>
-							<td>3</td>
-							<td>Omi Gusty</td>
-							<td>Ds. Gladag, Kec. Rogojampi, Banyuwangi</td>
-							<td>0824-0522-6568</td>
-						</tr>
+							<tr>
+								<td>Adress</td>
+								<td>:</td>
+								<td>
+									<textarea rows="5" cols="50"></textarea>
+								</td>
+							</tr>
 
-						<tr>
-							<td>4</td>
-							<td>Ika Sari</td>
-							<td>Ds. Purwoharjo, Kec. Purwoharjo, Banyuwangi</td>
-							<td>0878-8364-8945</td>
-						</tr>
+							<tr>
+								<td>No Telp/Hp</td>
+								<td>:</td>
+								<td><input type="tel" name="telp"></td>
+							</tr>
 
-					</table>
+							<tr>
+								<td>Driver Seat</td>
+								<td>:</td>
+								<td>
+									<input type="radio" name="jk"> First Driver
+									<input type="radio" name="jk"> Second Driver
+								</td>
+							</tr>
+
+							<tr>
+								<td>Driver Category</td>
+								<td>:</td>
+								<td>
+									<input type="checkbox"> Bronze
+									<input type="checkbox"> Silver
+									<input type="checkbox"> Gold
+									<input type="checkbox"> Platinum
+								</td>
+							</tr>
+
+							<tr>
+								<td>Pas Photo</td>
+								<td>:</td>
+								<td>
+									<input type="file">
+								</td>
+							</tr>
+				
+							<tr>
+								<td colspan="3">
+									<input type="submit" value="Submit">
+								</td>
+							</tr>
+
+							<tr>
+								<td></td>
+								<td></td>
+								<td>
+									<input type="button" value="<<< Kembali">
+									<input type="submit" value="Tambah Data >>>">
+								</td>
+							</tr>
+
+						</table>
+					</fieldset>
+				</form>
+			</section>
+			
+			<section>
+				<center>
+
+				<h2>Mercedes-AMG Petronas F1 Team</h2>
+
+				<img src="mercedes_f1.jpg"
+					 alt="Mercedes F1"
+					 width="650"
+					 usemap="#mercedesmap">
+
+				<map name="mercedesmap">
+
+					<area shape="rect"
+						  coords="0,0,325,333"
+						  href="https://www.mercedesamgf1.com"
+						  target="_blank"
+						  alt="Mercedes">
+
+					<area shape="rect"
+						  coords="326,0,650,333"
+						  href="https://www.formula1.com"
+						  target="_blank"
+						  alt="Formula 1">
+
+				</map>
+
+				<p>Klik sisi kiri atau kanan gambar <br>
+				untuk membuka halaman berbeda.</p>
+
 				</center>
 			</section>
 			<hr>
-
 			<section>
 				<center>
-					<h3>Login Form</h3>
-					<form action="/action_page.php">
-						<label for="fname">Username:</label><br>
-						<input type="text" id="fname" name="fname"><br>
-						<label for="iname">Password:</label><br>
-						<input type="password" id="iname" name="iname"><br><br>
-						<input type="submit" value="Submit">
-					</form>
-					<br>
-					<img src="mercedes_f1.jpg" alt="Mercedes" width="600" height="333"><br>
-					<br><br>
-					<hr>
+					<h2>Opening Titles F1 2026</h2>
 
-					<h3>Opening F1 2026</h3>
-					
-					<video width="600" height="340" autoplay muted>
+					<br><br>
+
+					<video id="f1Video" width="500" controls>
 						<source src="f1.mp4" type="video/mp4">
 					</video>
-					<br>
-					<hr>
-					
-					<h3>F1 Intro 2026</h3>
 
-					<p>Formula 1 Theme</p>
+					<script>
+						const video = document.getElementById("f1Video");
 
-						<audio controls>
-							<source src="opening_titles.mp3" type="audio/mpeg">
-						</audio>
+						function toggleVideo() {
+							if (video.paused) {
+								video.play();
+							} else {
+								video.pause();
+							}
+						}
+
+						function ukuranBesar() {
+							video.width = 700;
+						}
+
+						function ukuranSedang() {
+							video.width = 500;
+						}
+
+						function ukuranKecil() {
+							video.width = 350;
+						}
+					</script>
 					
+					<br><br>
+					<button onclick="toggleVideo()">Play / Pause</button>
+					<button onclick="ukuranBesar()">Zoom In</button>
+					<button onclick="ukuranSedang()">Normal</button>
+					<button onclick="ukuranKecil()">Zoom Out</button>
+				</center>
+				
+				<br><br>
+				<hr>
+				<center>
+					<h3>F1 Opening Theme</h3>
+
+					<audio controls>
+						<source src="opening_titles.mp3" type="audio/mpeg">
+					</audio>
 				</center>
 			</section>
+			
+			<br><br>
+			<hr>
 		</main>
-		<hr>
 		<footer>
 			<center>
 				<p>Copyrights 2026</p>
